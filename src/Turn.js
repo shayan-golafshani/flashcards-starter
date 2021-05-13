@@ -1,14 +1,19 @@
 class Turn {
-    constructor(guess, card){
-        //properties
+    constructor(guess, card){  
         this.guess = guess;
         this.card = card;
     }
-    //methods
-    returnGuess(){
-        return this.guess;
-    }
 
+    returnGuess = () =>  this.guess;
+
+    returnCard = () => this.card;
+    
+    evaluateGuess = () => this.guess === this.card.correctAnswer ? true : false;
+    
+    giveFeedback(){
+        return this.evaluateGuess() ?  "correct!" : "incorrect!";
+    } 
+        
 }
 
 module.exports = Turn;
