@@ -6,7 +6,7 @@ const Turn = require('../src/Turn');
 
 describe('Turn', () => {
 
-  let card, turn, guessOutcome;
+  let card, turn;
   
   beforeEach('setup', () => {
     card = new Card(1, "What is your favorite city in Japan?", ["Hiroshima, Onomichi, Osaka"] , 'Onomichi');
@@ -50,14 +50,11 @@ describe('Turn', () => {
   });
 
   it('should output whether the guess is correct.', () => {
-
     turn = new Turn("Onomichi", card);
     expect(turn.giveFeedback()).to.equal("correct!");
   });
 
-
   it('should output whether the guess is incorrect.', () => {
-
     turn = new Turn("Osaka", card);
     expect(turn.giveFeedback()).to.equal("incorrect!");
   });

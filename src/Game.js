@@ -22,7 +22,7 @@ class Game {
     this.currentRound = new Round(deck);
     this.printMessage(deck, this.currentRound);
     this.printQuestion(this.currentRound);
-    console.time('timer-1');
+    console.time('game duration');
 
     
     for(let i = 0; i < 1_000_000; i++) {
@@ -30,12 +30,12 @@ class Game {
     }
   }
 
-  printMessage(deck, round) {
+  printMessage = (deck, round) => {
       console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
-  printQuestion(round) {
+  printQuestion = (round) => {
       util.main(round);
   }
 }

@@ -6,7 +6,7 @@ const expect = chai.expect;
     const Game = require('../src/Game');
     const Round = require('../src/Round');
 
-describe.skip('Game', () => {
+describe('Game', () => {
   
   let card1, card2, card3, data, game;
   beforeEach('setup', () => {
